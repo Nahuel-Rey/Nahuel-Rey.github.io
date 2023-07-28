@@ -1,0 +1,353 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body{
+    font-family: 'Roboto Slab', serif;
+    background: #4031e8;
+    background: -webkit-linear-gradient(to right, #264562, #224d8a);
+    background: linear-gradient(to right, #254254, #1C6393);
+    min-height: 100vh;
+    display: flex;  
+}
+nav{
+    position:fixed;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #823153; /* Color de fondo regular */
+    padding: 10px 20px;
+    border-radius: 5px;
+    animation: waveAnimation 3s linear infinite;
+}
+
+nav a:hover {
+    background-color: #b84173; /* Color de fondo al hacer hover */
+    color: #ffffff; /* Color del texto al hacer hover */
+    opacity: 4; /* Desvanecimiento del enlace al hacer hover */
+    box-shadow: 0 2px 5px #ffffff;
+    transform: scale(1.5);
+    transition: background-color 1s, color 1s, opacity 1s; /* Transición suave */
+}
+.icon{
+    display: block;
+    z-index: 100;
+    animation: rotateIn 1.5s ease-in;
+}
+.icon:hover {
+    transform: scale(1.2); 
+    color: #f4f0f8;
+}
+
+header{
+
+    height: auto;
+    padding: 48px;
+}
+
+.container{
+    width: 95%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+}
+
+img{
+    display: block;
+    height: 450px;
+    object-fit: cover;
+    width: auto;
+    animation: moveUp 1.5s ease-in;
+}
+
+.text{
+    width: 50%;
+    color: #ffffff;
+}
+
+.text h1{
+    font-size: 80px;
+    animation: moveRight 1.5s ease-in;
+}
+
+.text h2{
+    font-size: 30px;
+    animation: moveLeft 1.5s ease-in;
+}
+
+.text a{
+    color: #fff;
+    font-weight: 300;
+    text-decoration: none;
+    margin-top: 30px;
+    border: 1px solid #fff;
+    width: 150px;
+    border-radius: 3px;
+    text-align: center;
+    padding: 10px 0;
+    animation: opa 2.5s ease-in;
+}
+.link {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    background-color: #000;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;  
+    border-radius: 5px;
+    background-image: url(imagen-links.png);
+    background-size: cover;
+    background-position: center;
+    transition:all 2.0s ease-in-out;
+       
+}
+.one{
+    -webkit-clip-path: circle(0% at 0 0);
+    clip-path: circle(0% at 0 0);
+}
+
+.two{
+    -webkit-clip-path: circle(150% at 0 0);
+    clip-path: circle(150% at 0 0);
+}
+
+.form{
+    background: rgba(255, 255, 255, 0);
+}
+
+.form{
+    background-color: #fff;
+    width: 90%;
+    margin: auto;
+    max-width: 400px;
+    border-radius: 1em;
+    padding: 3.5em 1.5em;
+}
+
+.form__container{
+    width: 100%;
+    display: grid;
+    gap: 1em;
+    grid-auto-columns: 100%;
+}
+
+.form__title{
+    text-align: center;
+    font-size: 1.9rem;
+    margin-bottom: .4em;
+}
+
+.form__input{
+    font-family: inherit;
+    font-size: 1rem;
+    padding: .8em 1em;
+    outline: none;
+    border: none;
+    border: 1px solid #bbb0b0;
+    border-radius: 0.2em;
+}
+
+.form__input--message{
+    resize: none;
+    padding: 1.8em 1em;
+    margin-bottom: .5em;
+}
+
+.form__cta{
+    font-family: inherit;
+    font-weight: 300;
+    font-size: 1rem;
+    background-color: #089FE0;
+    color: #fff;
+    border: none;
+    border-radius: -2em;
+    padding: .7em 0;
+    cursor: pointer;
+}
+
+.about__icons {
+    display: grid;
+    gap: 1em;
+    justify-items: center;
+    width: 260px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.icono {
+
+    display: inherit;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+.btn__grid {
+    margin-left: 70px;
+    display: grid;
+    grid-template-columns: 1fr 51px;
+    text-align: right!important;
+    background-color: #3a6073; 
+    color: white; 
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    opacity: 1; 
+    transition: opacity 0.3s ease;
+}
+
+.btn__grid:hover {
+    background-color: #1c8ec3;
+    box-shadow: 5px 5px 9px rgb(101, 151, 227);
+    opacity: 0.9
+}
+.nav__grid{
+    display: grid;
+    font-size: 1rem;
+    grid-template-columns: 1fr 20px;
+    text-align: right!important;
+}
+
+
+@keyframes moveLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveRight{
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveUp{
+    0%{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes opa{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    img{
+        height: 400px;
+    }
+}
+@media screen and (max-width:800px) {
+    img{
+        height: 370px;
+    }
+    .text h1{
+        font-size: 70px;
+    }
+    .text h2{
+        font-size: 25px;
+    }
+    .btn__grid{
+        margin-left: 35px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .link {
+      flex-wrap: wrap;
+    }
+    .nav__grid {
+        margin-bottom: 10px;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .container{
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .text{
+        width: 100%;
+        text-align: center;
+    }
+    .text h1{
+        font-size: 60px;
+    }
+    .form{
+        padding: 3.5em 1em;
+    }
+    .btn__grid{
+        margin-left: 97px;
+    }
+}
+@media screen and (max-width:340px) {
+    img{
+        height: 160px;
+    }
+    .text h1{
+        font-size: 35px;
+    }
+    .text h2{
+        font-size: 15px;
+    }
+    .text a{
+        width: 120px;
+    }
+    .btn__grid{
+        margin-left: 62px;
+        grid-template-columns: 1fr 34px;
+    }
+}
+@keyframes rotateIn {
+    from {
+      transform: rotate(-180deg);
+      opacity: 0;
+    }
+    to {
+      transform: rotate(0);
+      opacity: 1;
+    }
+}
+@keyframes waveAnimation {
+    0%, 100% { background: #823153; }
+    50% { background: #b84173; }
+}
+
